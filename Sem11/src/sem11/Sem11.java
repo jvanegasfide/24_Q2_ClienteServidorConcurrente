@@ -14,7 +14,19 @@ public class Sem11 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        GestionProfesores crudProfesor = new GestionProfesores();
+        
+        //for(Profesor profesor : crudProfesor.SelectProfesores("")){
+        //   System.out.println("Profesor: "+profesor.nombre+", correo: "+profesor.mail
+        //    +", id: "+profesor.idprofesor);
+        //   }
+        
+        //Profesor resultado = crudProfesor.SelectProfesorById(1);
+        // System.out.println("Profesor: "+resultado.nombre+", correo: "+resultado.mail
+        //    +", id: "+resultado.idprofesor);+
+        
+        //crudProfesor.CreateProfesor("Amanda Gonzalez", "prueba3@ufide.ac.cr");
+        //crudProfesor.UpdateProfesor(3,"Amanda Gonzalez", "agonzalez@ufide.ac.cr");
+        crudProfesor.DeleteProfesor(1);
     }
-    
 }

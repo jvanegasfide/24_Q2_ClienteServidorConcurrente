@@ -45,6 +45,10 @@ public class ConexionDB {
         }
     }
     
+    public PreparedStatement getconsulta(){
+        return consulta;
+    }
+    
     public ResultSet getResultado(){
         try {
             return consulta.executeQuery();
@@ -58,21 +62,27 @@ public class ConexionDB {
         //cerramos y limpiamos resultados
         
         try{
-            resultado.close();
+            if(resultado!= null){
+                resultado.close();
+            }
          } catch (SQLException error) {
              error.printStackTrace();
         }
 
         //cerramos la consulta
         try {
-            consulta.close();
+            if(consulta!=null){
+                consulta.close();
+            }
         } catch (SQLException error) {
              error.printStackTrace();
         }
         
         //cerramos y limpiamos la conexion
         try {
-            conexion.close();
+            if(conexion!=null){
+                conexion.close();
+            }
         } catch (SQLException error) {
              error.printStackTrace();
         }
